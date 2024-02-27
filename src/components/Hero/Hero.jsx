@@ -10,7 +10,7 @@ const bgStyle = {
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
     height: "520px",
-    width: "100vw",
+    width: "100vw"
 };
 
 const Hero = () => {
