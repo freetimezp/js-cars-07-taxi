@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import Navbar from "@/components/Navbar/Navbar";
+import Hero from "@/components/Hero/Hero";
 
 export default function Home() {
   useEffect(() => {
@@ -23,6 +24,7 @@ export default function Home() {
   return (
     <main className="">
       <Navbar />
+      <Hero />
     </main>
   );
 }
