@@ -1,10 +1,12 @@
 "use client";
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
+import dynamic from 'next/dynamic';
 
 import { HiMenuAlt3, HiMenuAlt1 } from 'react-icons/hi';
 
-import DarkMode from './DarkMode';
+const DarkMode = dynamic(() => import('./DarkMode'));
+
 import ResponsiveMenu from './ResponsiveMenu';
 
 export const itemsLinks = [
