@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Hero from "@/components/Hero/Hero";
 import Contact from "@/components/Contact/Contact";
 import BestCabs from "@/components/BestCabs/BestCabs";
+import About from "@/components/About/About";
 
 export default function Home() {
   useEffect(() => {
@@ -27,6 +28,7 @@ export default function Home() {
       <Hero />
       <Contact />
       <BestCabs />
+      <About />
     </main>
   );
 }
