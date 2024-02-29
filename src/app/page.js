@@ -12,6 +12,7 @@ import Contact from "@/components/Contact/Contact";
 import BestCabs from "@/components/BestCabs/BestCabs";
 import About from "@/components/About/About";
 import AppStore from "@/components/AppStore/AppStore";
+import Testimonials from "@/components/Testimonials/Testimonials";
 
 export default function Home() {
   useEffect(() => {
@@ -31,6 +32,7 @@ export default function Home() {
       <BestCabs />
       <About />
       <AppStore />
+      <Testimonials />
     </main>
   );
 }
