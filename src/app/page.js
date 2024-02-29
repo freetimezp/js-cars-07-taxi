@@ -11,6 +11,7 @@ import Hero from "@/components/Hero/Hero";
 import Contact from "@/components/Contact/Contact";
 import BestCabs from "@/components/BestCabs/BestCabs";
 import About from "@/components/About/About";
+import AppStore from "@/components/AppStore/AppStore";
 
 export default function Home() {
   useEffect(() => {
@@ -29,6 +30,7 @@ export default function Home() {
       <Contact />
       <BestCabs />
       <About />
+      <AppStore />
     </main>
   );
 }
