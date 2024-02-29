@@ -13,7 +13,6 @@ import BestCabs from "@/components/BestCabs/BestCabs";
 import About from "@/components/About/About";
 import AppStore from "@/components/AppStore/AppStore";
 import Testimonials from "@/components/Testimonials/Testimonials";
-import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
   useEffect(() => {
@@ -34,7 +33,6 @@ export default function Home() {
       <About />
       <AppStore />
       <Testimonials />
-      <Footer />
     </main>
   );
 }

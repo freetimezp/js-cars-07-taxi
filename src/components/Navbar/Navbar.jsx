@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
+import { usePathname } from 'next/navigation';
 
 import { HiMenuAlt3, HiMenuAlt1 } from 'react-icons/hi';
 
@@ -40,6 +41,7 @@ export const itemsLinks = [
 const Navbar = () => {
     const [Navlinks, setNavlinks] = useState([]);
     const [showMenu, setShowMenu] = useState(false);
+    const pathname = usePathname();
 
     const toggleMenu = () => {
         setShowMenu(!showMenu);
@@ -61,14 +63,18 @@ const Navbar = () => {
 
                     <div className="hidden md:block">
                         <ul className='flex items-center gap-6'>
-                            {Navlinks?.map(({ name, link, id }) => (
-                                <li key={id} className='py-3'>
-                                    <Link href={link} className={`text-lg font-medium text-black dark:text-white
-                                        py-2 px-4 rounded-full hover:bg-primary duration-300`}>
-                                        {name}
-                                    </Link>
-                                </li>
-                            ))}
+                            {Navlinks?.map(({ name, link, id }) => {
+                                const isActive = pathname === link;
+                                return (
+                                    <li key={id} className='py-3'>
+                                        <Link href={link} className={`${isActive ? 'bg-primary dark:text-black' : ''} 
+                                        text-lg font-medium text-black dark:text-white py-2 px-4 rounded-full
+                                         hover:bg-primary duration-300`}>
+                                            {name}
+                                        </Link>
+                                    </li>
+                                );
+                            })}
 
                             <DarkMode />
                         </ul>
